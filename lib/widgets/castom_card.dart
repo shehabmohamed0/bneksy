@@ -1,8 +1,10 @@
 import 'package:bneksy/models/best_Sold.dart';
 import 'package:flutter/material.dart';
+
+import '../models/final_model.dart';
 class Castom_card extends StatelessWidget {
 
-final BestSoldModel bestSold;
+final SuccessBestSold bestSold;
 
   Castom_card({Key? key, required this.bestSold}) : super(key: key);
   @override
@@ -11,7 +13,7 @@ final BestSoldModel bestSold;
       clipBehavior: Clip.none,
     children : [
       Container(
-        height: 130,
+        height: 150,
         width: 220,
         decoration: BoxDecoration(
           boxShadow: [
@@ -36,7 +38,7 @@ final BestSoldModel bestSold;
                   child: Image.network("https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",height: 50,),
                 ),
                 SizedBox(height: 5,),
-                Text(bestSold.success.product.name),
+                FittedBox(child: Text(bestSold.product.name)),
                 SizedBox(height: 5,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
