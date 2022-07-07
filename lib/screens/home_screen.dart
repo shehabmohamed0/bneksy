@@ -174,8 +174,7 @@ class _CatergoryState extends State<Catergory> {
 // dataFunction().then((v){
 //      setstate((data){
 //    your model = data;
-// });
-
+// })
 // });
     super.initState();
   }
